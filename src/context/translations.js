@@ -1,0 +1,445 @@
+const translations = {
+  en: {
+    // Navbar
+    nav_home: 'Home',
+    nav_shop: 'Shop',
+    nav_custom: 'Custom Order',
+    nav_gallery: 'Gallery',
+    nav_reviews: 'Reviews',
+    nav_contact: 'Contact',
+    nav_search_placeholder: 'Search anime, gaming, football canvas...',
+    nav_wishlist: 'Wishlist',
+    nav_admin: 'Admin',
+    nav_account: 'Account',
+
+    // Hero
+    hero_tag: 'Moul Tableaux — Premium Canvas Art',
+    hero_tagline: 'خلي صورتك تعيش فالطابلو',
+    hero_title: 'Turn your images into canvas art',
+    hero_subtitle: 'Anime, Gaming, Movies, Personal photos and custom creations. High-quality canvas to elevate your space.',
+    hero_cta: 'Shop Now',
+    hero_cta_secondary: 'View Gallery',
+
+    // Categories
+    categories_title: 'Popular Categories',
+    categories_subtitle: 'Discover our collection of premium canvas prints on top-quality materials.',
+    category_anime: 'Anime Art',
+    category_manga: 'Manga Panels',
+    category_wanted: 'Wanted Posters',
+    category_gaming: 'Gaming & Neon',
+    category_movies: 'Cinema & Retro',
+    category_football: 'Football Legends',
+    category_personal: 'Personal Photos',
+    category_custom: 'Custom Creations',
+    category_explore: 'Explore',
+
+    // Products
+    products_title: 'Our Featured Canvas',
+    products_subtitle: 'Hand-picked selection of art posters and frames.',
+    products_view_all: 'View entire catalog',
+    add_to_cart: 'Add to Cart',
+    order_whatsapp: 'Order via WhatsApp',
+    badge_new: 'New',
+    badge_bestseller: 'Popular',
+    badge_sale: 'Sale',
+
+    // Best Sellers
+    bestsellers_title: 'Best Sellers',
+    bestsellers_subtitle: 'The most loved frames by our community of fans in Morocco.',
+
+    // Cart
+    cart_title: 'Your Art Cart',
+    cart_empty: 'Your cart is empty. Find the artwork that inspires you!',
+    cart_continue: 'Continue Shopping',
+    cart_subtotal: 'Subtotal',
+    cart_shipping_note: 'Free express delivery across Morocco.',
+    cart_checkout: 'Proceed to Checkout',
+    cart_discount: 'Promo Code',
+    cart_coupon_placeholder: 'Promo code (e.g. MAROC10)',
+    cart_coupon_btn: 'Apply',
+    cart_coupon_success: 'Discount applied successfully!',
+
+    // Checkout
+    checkout_title: 'Complete My Order',
+    checkout_shipping_info: 'Delivery Information',
+    checkout_cod_note: 'Cash on Delivery payment. Simple and secure!',
+    checkout_full_name: 'Full Name',
+    checkout_phone: 'Phone Number',
+    checkout_city: 'City',
+    checkout_address: 'Delivery Address',
+    checkout_notes: 'Special instructions',
+    checkout_name_placeholder: 'Your full name',
+    checkout_phone_placeholder: '+212 600 000 000',
+    checkout_city_placeholder: 'Casablanca, Rabat, Marrakech...',
+    checkout_address_placeholder: 'Full delivery address',
+    checkout_notes_placeholder: 'Delivery or frame details',
+    checkout_summary: 'Order Summary',
+    checkout_shipping: 'Shipping',
+    checkout_free: 'Free Shipping',
+    checkout_total: 'Total',
+    checkout_submit: 'Confirm Order — Cash on Delivery',
+    checkout_success_title: 'Order Confirmed!',
+    checkout_success_msg: 'Thank you for your trust! We are preparing your premium canvas with care. Our team will contact you shortly.',
+    checkout_success_cta: 'Back to Home',
+    checkout_trust_title: 'Why Shop With Us',
+    checkout_trust_cod_title: 'Cash on Delivery',
+    checkout_trust_cod_desc: 'Pay only when you receive your order. No online payment needed.',
+    checkout_trust_delivery_title: 'Fast Delivery',
+    checkout_trust_delivery_desc: 'Your canvas arrives in 2-4 days, carefully packaged.',
+    checkout_trust_support_title: 'WhatsApp Support',
+    checkout_trust_support_desc: 'Direct chat with us anytime for order help.',
+    checkout_trust_premium_title: 'Premium Quality',
+    checkout_trust_premium_desc: 'Museum-grade canvas, solid wood frame.',
+
+    // Delivery
+    delivery_title: 'Moul Tableaux Delivery',
+    delivery_free_title: 'Flat Rate: 30 DH',
+    delivery_free_desc: 'Fixed delivery fee of 30 DH anywhere in Morocco.',
+    delivery_fast_title: 'Fast Production',
+    delivery_fast_desc: 'Your canvas is printed and framed within 24-48 hours.',
+    delivery_cod_title: 'Cash on Delivery',
+    delivery_cod_desc: 'No card needed. Pay in cash upon delivery.',
+
+    // Reviews
+    reviews_title: 'Customer Reviews',
+    reviews_subtitle: 'See photos of our frames from happy customers.',
+
+    // Instagram
+    instagram_title: 'Follow us on Instagram',
+    instagram_handle: '@moultableaux',
+    instagram_follow: 'Follow @moultableaux',
+    instagram_tag: '#MoulTableaux',
+    gallery_subtitle: 'Thousands of images transformed into high-quality art prints',
+    gallery_cta: 'See more on Instagram',
+
+    // Footer
+    footer_tagline: 'Moul Tableaux is Morocco\'s leading brand for custom art posters and frames. Elevate your walls with your passions!',
+    footer_shop: 'Quick Links',
+    footer_help: 'Support & FAQ',
+    footer_newsletter: 'Newsletter',
+    footer_newsletter_desc: 'Subscribe to receive exclusive offers and secret promo codes!',
+    footer_email_placeholder: 'Your email address',
+    footer_customer_service: 'Customer Service',
+    footer_delivery: 'Delivery Policy',
+    footer_returns: 'Replacement Guarantee',
+    footer_contact: 'Contact Us',
+    footer_rights: 'All rights reserved.',
+    footer_privacy: 'Legal Notice',
+    footer_terms: 'Terms & Conditions',
+
+    // WhatsApp
+    whatsapp_order: 'Hello Moul Tableaux! I would like to order these amazing canvas prints!',
+
+    // Feedback
+    feedback_title: 'Your Review',
+    feedback_subtitle: 'Share your experience with our canvas. Your feedback helps us improve.',
+    feedback_rating: 'Overall Rating',
+    feedback_comment: 'Your Message',
+    feedback_placeholder: 'Share your thoughts on quality, packaging, delivery...',
+    feedback_submit: 'Submit Review',
+    feedback_success: 'Thank you for your review! It has been published successfully.',
+    feedback_list_title: 'Customer Reviews',
+    feedback_empty: 'No reviews yet. Be the first to share your feedback!',
+
+    // Review form
+    review_name: 'Your Name',
+    review_name_placeholder: 'Enter your name',
+    review_verified: 'Verified',
+  },
+  fr: {
+    // Navbar
+    nav_home: 'Accueil',
+    nav_shop: 'Boutique',
+    nav_custom: 'Personnalisation',
+    nav_gallery: 'Galerie',
+    nav_reviews: 'Avis',
+    nav_contact: 'Contact',
+    nav_search_placeholder: 'Rechercher un tableau anime, gaming, wanted...',
+    nav_wishlist: 'Favoris',
+    nav_admin: 'Admin',
+    nav_account: 'Compte',
+
+    // Hero
+    hero_tag: 'Moul Tableaux — Cadres Premium',
+    hero_tagline: 'خلي صورتك تعيش فالطابلو',
+    hero_title: 'Transformez vos images en oeuvres d\'art',
+    hero_subtitle: 'Anime, Gaming, Films, Photos personnelles et creations sur mesure. Des cadres de haute qualite pour sublimer votre espace.',
+    hero_cta: 'Acheter Maintenant',
+    hero_cta_secondary: 'Voir la Galerie',
+
+    // Categories
+    categories_title: 'Catégories Populaires',
+    categories_subtitle: 'Découvrez notre collection de tableaux haut de gamme imprimés sur des supports de qualité supérieure.',
+    category_anime: 'Anime Art',
+    category_manga: 'Manga Panels',
+    category_wanted: 'Wanted Posters',
+    category_gaming: 'Gaming & Neon',
+    category_movies: 'Cinéma & Retro',
+    category_football: 'Football Legends',
+    category_personal: 'Photos Personnelles',
+    category_custom: 'Créations Sur Mesure',
+    category_explore: 'Découvrir',
+
+    // Products
+    products_title: 'Nos Tableaux Vedettes',
+    products_subtitle: 'Sélection coup de cœur de posters et cadres d\'art.',
+    products_view_all: 'Voir tout le catalogue',
+    add_to_cart: 'Ajouter au Panier 🛒',
+    order_whatsapp: 'Commander via WhatsApp 💬',
+    badge_new: 'Nouveau ✨',
+    badge_bestseller: 'Populaire 🔥',
+    badge_sale: 'Promotion 🏷️',
+
+    // Best Sellers
+    bestsellers_title: 'Les Plus Vendus',
+    bestsellers_subtitle: 'Les cadres les plus appréciés par notre communauté d\'otakus et de gamers au Maroc.',
+
+    // Cart
+    cart_title: 'Votre Panier d\'Art',
+    cart_empty: 'Votre panier est vide. Trouvez l\'œuvre qui vous inspire !',
+    cart_continue: 'Continuer mes Achats',
+    cart_subtotal: 'Sous-total',
+    cart_shipping_note: 'Livraison express gratuite sur tout le Maroc.',
+    cart_checkout: 'Passer à la Caisse 🛒',
+    cart_discount: 'Code Promo',
+    cart_coupon_placeholder: 'Code promo (ex: MAROC10)',
+    cart_coupon_btn: 'Appliquer',
+    cart_coupon_success: 'Remise appliquée avec succès !',
+
+    // Checkout
+    checkout_title: 'Finaliser ma Commande',
+    checkout_shipping_info: 'Informations de Livraison',
+    checkout_cod_note: 'Paiement à la livraison (Cash on Delivery). Simple et sécurisé !',
+    checkout_full_name: 'Nom Complet',
+    checkout_phone: 'Numéro Téléphone',
+    checkout_city: 'Ville',
+    checkout_address: 'Adresse de Livraison',
+    checkout_notes: 'Instructions spéciales',
+    checkout_name_placeholder: 'Votre nom complet',
+    checkout_phone_placeholder: '+212 600 000 000',
+    checkout_city_placeholder: 'Casablanca, Rabat, Marrakech...',
+    checkout_address_placeholder: 'Adresse de livraison complète',
+    checkout_notes_placeholder: 'Détails de livraison ou de cadre',
+    checkout_summary: 'Récapitulatif Commande',
+    checkout_shipping: 'Livraison',
+    checkout_free: 'Livraison Gratuite',
+    checkout_total: 'Total',
+    checkout_submit: 'Confirmer la Commande — Paiement à la Livraison 📦',
+    checkout_success_title: 'Commande Validée ! 🎉',
+    checkout_success_msg: 'Merci pour votre confiance ! Nous préparons vos tableaux premium avec soin. Notre équipe vous contactera sous peu.',
+    checkout_success_cta: 'Retour à l\'Accueil 🏠',
+    checkout_trust_title: 'Pourquoi Nous Choisir',
+    checkout_trust_cod_title: 'Paiement à la Livraison',
+    checkout_trust_cod_desc: 'Payez seulement à la réception. Pas de paiement en ligne.',
+    checkout_trust_delivery_title: 'Livraison Rapide',
+    checkout_trust_delivery_desc: 'Votre tableau arrive en 2-4 jours, soigneusement emballé.',
+    checkout_trust_support_title: 'Support WhatsApp',
+    checkout_trust_support_desc: 'Discutez directement avec nous pour toute question.',
+    checkout_trust_premium_title: 'Qualité Premium',
+    checkout_trust_premium_desc: 'Toile musée, cadre en bois massif.',
+
+    // Delivery
+    delivery_title: 'Livraison Moul Tableaux',
+    delivery_free_title: 'Livraison: 30 DH Fixe',
+    delivery_free_desc: 'Frais de livraison fixes de 30 DH partout au Maroc.',
+    delivery_fast_title: 'Production Rapide',
+    delivery_fast_desc: 'Vos tableaux sont imprimes et encadres sous 24-48 heures.',
+    delivery_cod_title: 'Paiement a la Livraison',
+    delivery_cod_desc: 'Pas de carte necessaire. Vous payez en especes a la livraison.',
+
+    // Reviews
+    reviews_title: 'Avis de Nos Clients',
+    reviews_subtitle: 'Découvrez les photos de nos cadres chez nos clients satisfaits.',
+
+    // Instagram
+    instagram_title: 'Suivez-nous sur Instagram',
+    instagram_handle: '@moultableaux',
+    instagram_follow: 'Rejoindre @moultableaux',
+    instagram_tag: '#MoulTableaux',
+    gallery_subtitle: 'Des milliers d\'images transformées en impressions artistiques de haute qualité',
+    gallery_cta: 'Voir plus sur Instagram',
+
+    // Footer
+    footer_tagline: 'Moul Tableaux est la marque marocaine de référence pour les cadres et posters personnalisés d\'art. Sublimons vos murs avec vos passions ! 🎨',
+    footer_shop: 'Liens Utiles',
+    footer_help: 'Support & FAQ',
+    footer_newsletter: 'Lettre d\'Information',
+    footer_newsletter_desc: 'Abonnez-vous pour recevoir des offres exclusives et des codes promo secrets !',
+    footer_email_placeholder: 'Votre adresse email',
+    footer_customer_service: 'Service Client',
+    footer_delivery: 'Politique de Livraison',
+    footer_returns: 'Garantie de Remplacement',
+    footer_contact: 'Contactez-nous',
+    footer_rights: 'Tous droits réservés.',
+    footer_privacy: 'Mentions Légales',
+    footer_terms: 'Conditions Générales',
+
+    // WhatsApp
+    whatsapp_order: 'Bonjour Moul Tableaux ! Je souhaite commander ces superbes tableaux !',
+
+    // Feedback
+    feedback_title: 'Votre Avis',
+    feedback_subtitle: 'Partagez votre expérience avec nos tableaux. Votre retour nous aide à nous améliorer.',
+    feedback_rating: 'Note Générale',
+    feedback_comment: 'Votre Message',
+    feedback_placeholder: 'Partagez votre avis sur la qualité, l\'emballage, la livraison...',
+    feedback_submit: 'Envoyer mon Avis',
+    feedback_success: 'Merci pour votre avis ! Il a été publié avec succès.',
+    feedback_list_title: 'Avis des Clients',
+    feedback_empty: 'Aucun avis pour le moment. Soyez le premier à donner votre retour !',
+
+    // Review form
+    review_name: 'Votre Nom',
+    review_name_placeholder: 'Entrez votre nom',
+    review_verified: 'Vérifié',
+  },
+  ar: {
+    // Navbar
+    nav_home: 'الرئيسية',
+    nav_shop: 'المتجر',
+    nav_custom: 'لوحة خاصة',
+    nav_gallery: 'المعرض',
+    nav_reviews: 'الآراء',
+    nav_contact: 'اتصل بنا',
+    nav_search_placeholder: 'ابحث عن لوحة أنمي، ألعاب، بوسترات...',
+    nav_wishlist: 'المفضلة',
+    nav_admin: 'لوحة التحكم',
+    nav_account: 'حسابي',
+
+    // Hero
+    hero_tag: 'مول الطابلوهات — لوحات جدارية راقية',
+    hero_tagline: 'خلي صورتك تعيش فالطابلو',
+    hero_title: 'خلي صورتك تعيش فالتابلو',
+    hero_subtitle: 'انمي، العاب، افلام، صور شخصية وتصاميم مخصصة. اطارات فاخرة عالية الجودة لتزيين مساحتك الخاصة.',
+    hero_cta: 'تسوق الآن',
+    hero_cta_secondary: 'تصفح المعرض',
+
+    // Categories
+    categories_title: 'أصناف اللوحات',
+    categories_subtitle: 'اكتشف مجموعتنا الواسعة من اللوحات المطبوعة على أفضل الخامات.',
+    category_anime: 'لوحات أنمي',
+    category_manga: 'صفحات مانغا',
+    category_wanted: 'بوسترات المكافآت',
+    category_gaming: 'لوحات الألعاب والنيون',
+    category_movies: 'أفلام وسينما كلاسيكية',
+    category_football: 'أساطير كرة القدم',
+    category_personal: 'صور شخصية مخصصة',
+    category_custom: 'تصاميم حسب الطلب',
+    category_explore: 'استكشف',
+
+    // Products
+    products_title: 'لوحاتنا المتميزة',
+    products_subtitle: 'تشكيلة مختارة بعناية من أجمل اللوحات والبوسترات الفنية.',
+    products_view_all: 'عرض كل اللوحات',
+    add_to_cart: 'أضف إلى السلة',
+    order_whatsapp: 'اطلب عبر الواتساب',
+    badge_new: 'جديد',
+    badge_bestseller: 'الأكثر مبيعاً',
+    badge_sale: 'تخفيض',
+
+    // Best Sellers
+    bestsellers_title: 'اللوحات الأكثر مبيعاً',
+    bestsellers_subtitle: 'اللوحات المفضلة لدى مجتمع الأوتاكو واللاعبين في المغرب.',
+
+    // Cart
+    cart_title: 'سلة التسوق الفنية',
+    cart_empty: 'سلتك فارغة حالياً. ابحث عن العمل الفني الذي يلهمك!',
+    cart_continue: 'متابعة التسوق',
+    cart_subtotal: 'المجموع الفرعي',
+    cart_shipping_note: 'شحن سريع ومجاني لجميع المدن المغربية.',
+    cart_checkout: 'إتمام الطلب',
+    cart_discount: 'كوبون الخصم',
+    cart_coupon_placeholder: 'أدخل كوبون الخصم (مثال: MAROC10)',
+    cart_coupon_btn: 'تطبيق',
+    cart_coupon_success: 'تم تطبيق الخصم بنجاح !',
+
+    // Checkout
+    checkout_title: 'تأكيد طلبك',
+    checkout_shipping_info: 'معلومات الشحن والتوصيل',
+    checkout_cod_note: 'الدفع نقداً عند الاستلام. طريقة آمنة وسهلة !',
+    checkout_full_name: 'الاسم الكامل',
+    checkout_phone: 'رقم الهاتف',
+    checkout_city: 'المدينة',
+    checkout_address: 'عنوان التوصيل الكامل',
+    checkout_notes: 'تعليمات خاصة بالطلب',
+    checkout_name_placeholder: 'اسمك الكامل',
+    checkout_phone_placeholder: '+212 600 000 000',
+    checkout_city_placeholder: 'الدار البيضاء، الرباط، مراكش...',
+    checkout_address_placeholder: 'عنوان التوصيل بالتفصيل',
+    checkout_notes_placeholder: 'أية ملاحظات بخصوص الإطار أو الشحن',
+    checkout_summary: 'تفاصيل الطلب',
+    checkout_shipping: 'الشحن والتوصيل',
+    checkout_free: 'شحن مجاني',
+    checkout_total: 'المجموع الإجمالي',
+    checkout_submit: 'تأكيد الطلب — الدفع عند الاستلام',
+    checkout_success_title: 'تم تأكيد طلبك بنجاح !',
+    checkout_success_msg: 'نشكرك على ثقتك! نقوم حالياً بتجهيز لوحاتك الفنية بعناية فائقة. سيتصل بك فريقنا قريباً للتنسيق.',
+    checkout_success_cta: 'العودة للرئيسية',
+    checkout_trust_title: 'لماذا تختارنا',
+    checkout_trust_cod_title: 'الدفع عند الاستلام',
+    checkout_trust_cod_desc: 'ادفع فقط عند استلام طلبك. لا حاجة للدفع الإلكتروني.',
+    checkout_trust_delivery_title: 'توصيل سريع',
+    checkout_trust_delivery_desc: 'لوحتك تصل في 2-4 أيام، معبأة بعناية.',
+    checkout_trust_support_title: 'دعم عبر واتساب',
+    checkout_trust_support_desc: 'تحدث معنا مباشرة لأي سؤال.',
+    checkout_trust_premium_title: 'جودة ممتازة',
+    checkout_trust_premium_desc: 'قماش متحفي، إطار خشبي صلب.',
+
+    // Delivery
+    delivery_title: 'الشحن والتوصيل',
+    delivery_free_title: 'توصيل بثابت 30 درهم',
+    delivery_free_desc: 'رسوم توصيل ثابتة 30 درهم لأي مكان في المغرب.',
+    delivery_fast_title: 'تصنيع سريع وبجودة عالية',
+    delivery_fast_desc: 'تجهيز اللوحات وتأطيرها خلال 24-48 ساعة عمل.',
+    delivery_cod_title: 'الدفع عند الاستلام نقداً',
+    delivery_cod_desc: 'لا تحتاج لبطاقة دفع إلكتروني. الدفع نقداً عند استلام لوحتك.',
+
+    // Reviews
+    reviews_title: 'آراء عملائنا الكرام',
+    reviews_subtitle: 'صور وتجارب عملائنا مع اللوحات الفنية التي زينت بيوتهم.',
+
+    // Instagram
+    instagram_title: 'تابعونا على إنستغرام',
+    instagram_handle: '@moultableaux',
+    instagram_follow: 'تابع صفحة @moultableaux',
+    instagram_tag: '#MoulTableaux',
+    gallery_subtitle: 'آلاف الصور تحولت لوحات فنية مطبوعة بجودة عالية',
+    gallery_cta: 'شاهد المزيد على إنستغرام',
+
+    // Footer
+    footer_tagline: 'مول الطابلوهات هو العلامة المغربية الرائدة في صناعة اللوحات والبوسترات الفنية المخصصة. زين جدران غرفتك بشغفك الفني!',
+    footer_shop: 'روابط هامة',
+    footer_help: 'الدعم والأسئلة الشائعة',
+    footer_newsletter: 'النشرة البريدية',
+    footer_newsletter_desc: 'اشترك في قائمتنا البريدية للحصول على عروض وتخفيضات سرية وحصرية !',
+    footer_email_placeholder: 'بريدك الإلكتروني',
+    footer_customer_service: 'خدمة العملاء',
+    footer_delivery: 'سياسة التوصيل والشحن',
+    footer_returns: 'سياسة الضمان والاستبدال',
+    footer_contact: 'تواصل معنا',
+    footer_rights: 'جميع الحقوق محفوظة.',
+    footer_privacy: 'سياسة الخصوصية والشروط',
+    footer_terms: 'اتفاقية الاستخدام',
+
+    // WhatsApp
+    whatsapp_order: 'مرحباً مول الطابلوهات! أريد طلب هذه اللوحات الفنية الرائعة!',
+
+    // Feedback
+    feedback_title: 'رأيك يهمنا',
+    feedback_subtitle: 'شاركنا تجربتك مع لوحاتنا الفنية. ملاحظاتك تساعدنا على التحسين.',
+    feedback_rating: 'التقييم العام',
+    feedback_comment: 'رسالتك',
+    feedback_placeholder: 'اكتب رأيك حول الجودة، التغليف، التوصيل...',
+    feedback_submit: 'إرسال رأيي',
+    feedback_success: 'شكراً لرأيك! تم نشره بنجاح.',
+    feedback_list_title: 'آراء العملاء',
+    feedback_empty: 'لا توجد آراء بعد. كن أول من يشارك تجربته!',
+
+    // Review form
+    review_name: 'اسمك',
+    review_name_placeholder: 'أدخل اسمك',
+    review_verified: 'موثق',
+  },
+};
+
+export default translations;

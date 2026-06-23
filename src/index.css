@@ -1,0 +1,391 @@
+@import "tailwindcss";
+
+:root {
+  --theme-bg: #FAF5F0;
+  --theme-surface: #FFFFFF;
+  --theme-text: #2B2018;
+  --theme-text-muted: #8A7E72;
+  --theme-border: #E8D5C4;
+  --theme-card-bg: #FFFFFF;
+  --theme-shadow: 0 10px 25px rgba(181, 74, 58, 0.08);
+  --theme-primary: #B54A3A;
+  --theme-accent: #D4A030;
+  --theme-grid-dot: rgba(181, 74, 58, 0.04);
+}
+
+body.dark {
+  --theme-bg: #1A1210;
+  --theme-surface: #231A16;
+  --theme-text: #F5E8D8;
+  --theme-text-muted: #B0A494;
+  --theme-border: #3D3028;
+  --theme-card-bg: #231A16;
+  --theme-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+  --theme-primary: #C85A3A;
+  --theme-accent: #E0B840;
+  --theme-grid-dot: rgba(224, 184, 64, 0.04);
+}
+
+@theme {
+  --color-theme-bg: var(--theme-bg);
+  --color-theme-surface: var(--theme-surface);
+  --color-theme-text: var(--theme-text);
+  --color-theme-muted: var(--theme-text-muted);
+  --color-theme-border: var(--theme-border);
+  --color-theme-card: var(--theme-card-bg);
+  --color-theme-shadow: var(--theme-shadow);
+  
+  /* ── Primary (Warm Terracotta Red — extracted from reference) ── */
+  --color-primary-50: #FDF2EF;
+  --color-primary-100: #F9DCD6;
+  --color-primary-200: #F2B5A8;
+  --color-primary-300: #E88874;
+  --color-primary-400: #C85A3A;
+  --color-primary-500: #B54A3A;
+  --color-primary-600: #963828;
+  --color-primary-700: #7A2A1C;
+  --color-primary-800: #5E1E14;
+  --color-primary-900: #3D120C;
+  --color-primary-950: #2A0A06;
+
+  /* ── Accent / Gold (extracted from reference) ── */
+  --color-lavender-50: #FDF9F0;
+  --color-lavender-100: #FAF0D8;
+  --color-lavender-200: #F2DDA8;
+  --color-lavender-300: #E0B840;
+  --color-lavender-400: #D4A030;
+  --color-lavender-500: #B58820;
+  --color-lavender-600: #8F6C18;
+  --color-lavender-700: #6B5010;
+  --color-lavender-800: #47350A;
+
+  /* ── Golden (alias for golden-X utilities) ── */
+  --color-golden-100: #FAF0D8;
+  --color-golden-200: #F2DDA8;
+  --color-golden-300: #E0B840;
+  --color-golden-400: #B58820;
+  --color-golden-500: #8F6C18;
+
+  /* ── Warm Orange (extracted secondary accent) ── */
+  --color-babyblue-50: #FFF5ED;
+  --color-babyblue-100: #FFE8D4;
+  --color-babyblue-200: #FDBA88;
+  --color-babyblue-300: #C85A3A;
+  --color-babyblue-400: #C85016;
+  --color-babyblue-500: #A84210;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Poppins', sans-serif;
+  
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-logo-float: logo-float 4s ease-in-out infinite;
+  --animate-sparkle: sparkle 2s ease-in-out infinite;
+  --animate-sticker-bounce: sticker-bounce 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite alternate;
+  --animate-fade-in: fade-in 0.6s ease forwards;
+  --animate-fade-in-up: fade-in-up 0.6s ease forwards;
+  --animate-slide-up: slide-up 0.5s ease forwards;
+  --animate-pulse-soft: pulse-soft 2.5s ease-in-out infinite;
+  --animate-slide-in-right: slide-in-right 0.3s ease-out forwards;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(1deg); }
+}
+
+@keyframes logo-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.4; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+@keyframes sticker-bounce {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-4px) scale(1.02); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(181, 74, 58, 0.3); }
+  50% { transform: scale(1.03); box-shadow: 0 0 0 8px rgba(181, 74, 58, 0); }
+}
+
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(100px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Hero Section Animations ── */
+@keyframes hero-logo-entrance {
+  0% { opacity: 0; transform: scale(0.7) translateY(20px); filter: blur(8px); }
+  60% { opacity: 1; transform: scale(1.05) translateY(-4px); filter: blur(0); }
+  100% { opacity: 1; transform: scale(1) translateY(0); filter: blur(0); }
+}
+
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-logo-entrance {
+  animation: hero-logo-entrance 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-fade-up {
+  animation: hero-fade-up 0.8s ease forwards;
+}
+
+@keyframes hero-logo-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+.hero-logo-breathe {
+  animation: hero-logo-breathe 4s ease-in-out infinite;
+}
+
+/* ── Subtle poster float animations — applied to select background posters ── */
+@keyframes poster-drift-1 {
+  0%, 100% { transform: translate(0, 0) rotate(var(--base-rot, 0deg)); }
+  25% { transform: translate(4px, -6px) rotate(var(--base-rot, 0deg)); }
+  50% { transform: translate(-2px, -10px) rotate(var(--base-rot, 0deg)); }
+  75% { transform: translate(5px, -4px) rotate(var(--base-rot, 0deg)); }
+}
+
+@keyframes poster-drift-2 {
+  0%, 100% { transform: translate(0, 0) rotate(var(--base-rot, 0deg)); }
+  33% { transform: translate(-5px, -8px) rotate(var(--base-rot, 0deg)); }
+  66% { transform: translate(3px, -12px) rotate(var(--base-rot, 0deg)); }
+}
+
+@keyframes poster-drift-3 {
+  0%, 100% { transform: translate(0, 0) rotate(var(--base-rot, 0deg)); }
+  50% { transform: translate(6px, -7px) rotate(var(--base-rot, 0deg)); }
+}
+
+.poster-float-1 { animation: poster-drift-1 16s ease-in-out infinite; }
+.poster-float-2 { animation: poster-drift-2 20s ease-in-out infinite; }
+.poster-float-3 { animation: poster-drift-3 14s ease-in-out infinite; }
+
+/* ── Warm glow pulse — behind collage ── */
+@keyframes warm-glow-pulse {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.28; }
+}
+
+.warm-glow-pulse {
+  animation: warm-glow-pulse 8s ease-in-out infinite;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   AUTO-ADAPTIVE BACKGROUND SYSTEM — Three-tier media queries
+   Mobile ≤768px | Tablet 769–1024px | Desktop >1024px
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── MOBILE (≤768px) — lightweight, minimal, readable ── */
+@media (max-width: 768px) {
+  /* Scale poster grid to fill mobile viewport — makes posters larger and denser */
+  .poster-grid {
+    transform: scale(1.4) !important;
+    transform-origin: center center;
+  }
+
+  /* Hide tier-b and tier-c — only 12 center posters remain */
+  .poster-tier-b,
+  .poster-tier-c { display: none !important; }
+
+  /* Disable all poster float animations */
+  .poster-float-1,
+  .poster-float-2,
+  .poster-float-3 {
+    animation: none !important;
+  }
+
+  /* Disable warm glow pulse — static low opacity only */
+  .warm-glow-pulse {
+    animation: none !important;
+    opacity: 0.08 !important;
+  }
+
+  /* Reduce poster opacity for readability */
+  .poster-tier-a {
+    opacity: 0.45 !important;
+  }
+}
+
+/* ── TABLET (769–1024px) — balanced hybrid ── */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Hide tier-c — 20 posters remain (12a + 8b) */
+  .poster-tier-c { display: none !important; }
+
+  /* Slow down float animations — calmer motion */
+  .poster-float-1 { animation-duration: 24s !important; }
+  .poster-float-2 { animation-duration: 28s !important; }
+  .poster-float-3 { animation-duration: 22s !important; }
+
+  /* Reduce warm glow intensity — static, no pulse */
+  .warm-glow-pulse {
+    animation-duration: 12s !important;
+    opacity: 0.1 !important;
+  }
+
+  /* Slightly reduce poster opacity */
+  .poster-tier-a,
+  .poster-tier-b {
+    opacity: 0.6 !important;
+  }
+}
+
+/* ── DESKTOP (>1024px) — full premium experience ── */
+/* No overrides needed — all defaults apply */
+
+@layer base {
+  body {
+    @apply bg-theme-bg text-theme-text font-sans antialiased transition-colors duration-300;
+    line-height: 1.7;
+    background-image: radial-gradient(var(--theme-grid-dot) 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold text-theme-text tracking-wide;
+    line-height: 1.25;
+  }
+
+  [dir="rtl"] body {
+    font-family: 'Space Grotesk', 'Segoe UI', Tahoma, sans-serif;
+  }
+}
+
+@layer components {
+  /* Premium Woodblock/Wanted Poster Buttons */
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white border-2 border-primary-700 px-6 py-3 rounded-xl transition-all duration-200 tracking-wider font-serif font-bold hover:scale-[1.02] shadow-[0_4px_0_#7A2A1C] active:translate-y-0.5 active:shadow-[0_1.5px_0_#7A2A1C] inline-flex items-center justify-center gap-2 cursor-pointer;
+  }
+
+  .btn-outline {
+    @apply bg-white hover:bg-primary-50 text-primary-500 border-2 border-theme-border px-6 py-3 rounded-xl transition-all duration-200 tracking-wider font-serif font-bold hover:scale-[1.02] shadow-[0_4px_0_#E8D5C4] active:translate-y-0.5 active:shadow-[0_1.5px_0_#E8D5C4] inline-flex items-center justify-center gap-2 cursor-pointer dark:bg-theme-card dark:hover:bg-primary-900;
+  }
+
+  .btn-secondary {
+    @apply bg-lavender-400 hover:bg-lavender-500 text-white border-2 border-lavender-600 px-6 py-3 rounded-xl transition-all duration-200 tracking-wider font-serif font-bold hover:scale-[1.02] shadow-[0_4px_0_#8F6C18] active:translate-y-0.5 active:shadow-[0_1.5px_0_#8F6C18] inline-flex items-center justify-center gap-2 cursor-pointer;
+  }
+
+  .container-custom {
+    @apply max-w-[1200px] mx-auto px-5 md:px-8;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-5xl font-serif text-theme-text mb-4 font-bold tracking-tight uppercase border-b-4 border-primary-400 pb-2 inline-block;
+  }
+
+  .section-divider {
+    @apply flex items-center justify-center gap-3 my-6 text-primary-400/40;
+  }
+
+  /* Premium Framed Card Style */
+  .premium-card, .cute-card {
+    @apply bg-theme-card border-2 border-theme-border rounded-xl p-6 hover:translate-y-[-4px] transition-all duration-300 relative overflow-hidden;
+    box-shadow: var(--theme-shadow);
+    background-image: linear-gradient(180deg, rgba(232, 213, 196, 0.08) 0%, rgba(232, 213, 196, 0) 100%);
+  }
+
+  /* Vintage Poster Texture */
+  .vintage-texture {
+    background-color: var(--theme-bg);
+    background-image: 
+      radial-gradient(rgba(181, 74, 58, 0.03) 1.5px, transparent 1.5px),
+      linear-gradient(to right, rgba(43, 43, 43, 0.01) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(43, 43, 43, 0.01) 1px, transparent 1px);
+    background-size: 20px 20px, 80px 80px, 80px 80px;
+  }
+}
+
+
+/* Premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--theme-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--theme-accent);
+  border-radius: 4px;
+  border: 1px solid var(--theme-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-primary);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ── Mobile Performance & UX Overrides ── */
+@media (max-width: 767px) {
+  /* Disable heavy background-attachment: fixed (causes scroll jank on mobile) */
+  body {
+    background-attachment: scroll !important;
+  }
+
+  /* Pause heavy animations on mobile */
+  .hero-logo-breathe {
+    animation: none !important;
+  }
+
+  /* Remove hover-only transforms that don't work on touch */
+  .group:hover .group-hover\:translate-y-0 {
+    transform: none;
+  }
+
+  /* Ensure all interactive elements meet 44px touch target */
+  button, a, [role="button"] {
+    min-height: 44px;
+  }
+
+  /* Increase tap area for small icon buttons */
+  .touch-target-lg {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
